@@ -2,4 +2,4 @@ This application was designed to offer the user the ability to generate and save
 
 Created using Express.js on the backend this Note Taker saves and retrieves data from a JSON file.
 
-![public/assets/11-express-homework-demo-01.png]
+![](public/assets/11-express-homework-demo-01.png)
