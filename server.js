@@ -7,8 +7,8 @@ const app = express ();
 const PORT = process.env.PORT || 3500;
 
 //Access public file
-app.use(express.static(_dirname + '/public'));
-app.use(express.static('./'));
+app.use(express.static("public"));
+
 
 //Sets up the express app to handle data parsing
 app.use(express.urlencoded({extended: true }));
@@ -16,8 +16,8 @@ app.use(express.json());
 
 //Router
 //points server to a series of route files.
-require("./apiRoutes")(app);
-require(".htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 //Listner
 //starts the server

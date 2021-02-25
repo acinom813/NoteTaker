@@ -14,7 +14,7 @@ app.post('/api/notes', (req, res) => {
     let lastId;
 
     if(noteList.length) {
-        lastId = Math.max(...lastId(noteList.map(note =>note.id)));
+        lastId = Math.max(...(noteList.map(note =>note.id)));
     } else {
         lastId = 0;
     }
@@ -25,7 +25,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 //Deletes api/notes/:id
-    app.delete('/api/notes/:id', (req,res) {
+    app.delete('/api/notes/:id', (req,res) => {
     let findNote = noteList.find (({id})  => id ===JSON.parse(req.params.id));
    //Object matching the index of the noteID will be deleted
    noteList.splice(noteList.indexOf(findNote), 1);
