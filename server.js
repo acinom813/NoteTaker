@@ -6,7 +6,8 @@ const express = require('express');
 const app = express ();
 const PORT = process.env.PORT || 3500;
 
-//Access public file
+//Makes public folder home directory
+//also allows the browser to access all the files in the public
 app.use(express.static("public"));
 
 
